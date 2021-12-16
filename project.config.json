@@ -2,7 +2,7 @@
 	"miniprogramRoot": "./dist",
 	"projectname": "tools-miniprogram",
 	"description": "一个工具应用，用于探索Taro与小程序的能力边界，基于 Taro3 + React 实现",
-	"appid": "touristappid",
+	"appid": "wx0b32dc740be4b1f5",
 	"setting": {
 		"urlCheck": true,
 		"es6": false,
