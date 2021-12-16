@@ -1,8 +1,8 @@
 {
-	"name": "taro3-react-template",
+	"name": "tools-miniprogram",
 	"version": "1.0.0",
 	"private": true,
-	"description": "taro3-react多端项目模板",
+	"description": "一个工具应用，用于探索Taro与小程序的能力边界，基于 Taro3 + React 实现",
 	"templateInfo": {
 		"name": "mobx",
 		"typescript": true,

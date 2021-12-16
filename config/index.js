@@ -2,8 +2,8 @@ const path = require('path')
 const plugins = require('./plugins')
 
 const config = {
-	projectName: 'taro3-react-template',
-	date: '2021-12-10',
+	projectName: 'tools-miniprogram',
+	date: '2021-12-17',
 	designWidth: 750,
 	deviceRatio: {
 		640: 2.34 / 2,
