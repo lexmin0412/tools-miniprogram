@@ -3,6 +3,7 @@ const config = {
 		TARO_API_BASE: JSON.stringify(
 			process.env.TARO_ENV === 'weapp' ? 'https://m.test.xxx.cn/api' : '/api'
 		), // h5本地调试时接口使用代理 指向需要请求的后端服务
+		GITHUB_API_BASE: JSON.stringify('https://api.cellerchan.top/github'),
 	},
 	h5: {
 		devServer: {

@@ -53,7 +53,7 @@ class BaseRequest {
 		data,
 		method,
 		header = {
-			'Content-Type': 'application/json',
+			// 'Content-Type': 'application/json',
 		},
 		dataType = 'json',
 		responseType = 'text',
@@ -67,7 +67,7 @@ class BaseRequest {
 		if (!hostKey) {
 			throw '请指定service key'
 		}
-		const hostUrl = TARO_API_BASE // 通过hostKey去配置文件中寻找对应的host
+		const hostUrl = hostKey // 通过hostKey去配置文件中寻找对应的host
 		header[Constants.INTERCEPTOR_HEADER] = {
 			hostKey,
 			hostUrl,

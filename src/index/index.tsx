@@ -1,35 +1,44 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { View } from '@tarojs/components'
-import { XButton } from 'taro-x-ui'
-import Router from '@/utils/route'
+import { XLoadMore } from 'taro-x-ui'
+import searchService from '@/services/github/search.service'
 
 import './index.scss'
 
 const Index = (): JSX.Element => {
+	const [data, setData] = useState([])
+
 	useEffect(() => {
 		console.log('process.env', process.env.TARO_ENV)
 		console.log('TARO_API_BASE', TARO_API_BASE)
+		queryData()
 	}, [])
 
-	/**
-	 * 跳转demo页面
-	 */
-	const jumpToDemo = (demoType: 'router') => {
-		switch (demoType) {
-			case 'router':
-				Router.navigateTo({
-					url: '/demo/router/router',
-				})
-				break
-
-			default:
-				break
+	const queryData = async () => {
+		const {
+			code,
+			data: { items },
+		} = await searchService.searchRepositories({
+			q: 'taro',
+		})
+		if (code === '0') {
+			setData(items)
 		}
 	}
 
 	return (
 		<View className='index'>
-			<XButton onClick={() => jumpToDemo('router')}>路由跳转</XButton>
+			<View className='list-box'>
+				{data.map((item: any) => {
+					return (
+						<View key={item.id} className='list-item'>
+							<View className='item-name'>{item.name}</View>
+							<View className='item-desc'>{item.description}</View>
+						</View>
+					)
+				})}
+				<XLoadMore hasMore={false} />
+			</View>
 		</View>
 	)
 }

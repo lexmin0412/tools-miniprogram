@@ -1,7 +1,27 @@
 @import './../_resources/styles/var.scss';
+@import '~taro-x-ui/dist/style/components/loadMore.scss';
 
-.test {
-	color: $baseFontSize;
-	font-size: $baseFontColor;
-	box-sizing: border-box;
+.index {
+	padding-bottom: 100px;
+
+	.list-box {
+		background-color: #fff;
+
+		.list-item {
+			margin: 0 24px 20px;
+			background-color: #fff;
+			box-shadow: 1px 2px 20px 2px #eff0f5;
+			padding: 20px;
+			// border: 1px solid #999;
+
+			.item-name {
+				font-size: 28px;
+				color: #333;
+			}
+			.item-desc {
+				font-size: 24px;
+				color: #999;
+			}
+		}
+	}
 }

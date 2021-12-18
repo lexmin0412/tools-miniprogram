@@ -24,6 +24,7 @@ export const HOSTS = {
 	 * 接口请求base
 	 */
 	TARO_API_BASE: 'TARO_API_BASE',
+	GITHUB_API_BASE: 'GITHUB_API_BASE',
 }
 
 export default Constants
