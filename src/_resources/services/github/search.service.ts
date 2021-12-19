@@ -8,7 +8,7 @@ class SearchService extends Request {
 	}
 
 	/**
-	 * 获取用户信息
+	 * 根据关键词搜索仓库
 	 */
 	searchRepositories(payload: { q: string }) {
 		const { q } = payload

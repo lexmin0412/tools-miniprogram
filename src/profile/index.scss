@@ -1,0 +1,48 @@
+.user-index-page {
+	// display: flex;
+	// align-items: center;
+	// justify-content: center;
+	width: 100vw;
+	height: 100vh;
+	padding-bottom: 100px;
+
+	.taroify-tabs__content {
+		padding-bottom: 100px;
+	}
+}
+
+.list-item {
+	padding: 20px 0;
+	margin: 0 20px;
+	border-bottom: 1px solid #eff0f5;
+
+	.item-top {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		font-size: 28px;
+		color: #333;
+
+		.item-icons {
+			display: flex;
+			align-items: center;
+			color: #999;
+			font-size: 24px;
+
+			.item-icon-star {
+				display: flex;
+				align-items: center;
+
+				.item-icon-star-text {
+					margin-right: 10px;
+					margin-left: 10px;
+				}
+			}
+		}
+	}
+	.item-desc {
+		margin-top: 10px;
+		font-size: 24px;
+		color: #999;
+	}
+}

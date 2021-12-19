@@ -47,6 +47,7 @@ const config = {
 	h5: {
 		publicPath: '/h5',
 		staticDirectory: 'static',
+		esnextModules: ['@taroify'], // Taroify 默认采用 rem 单位，需要对 @taroify 里的样式单位进行转换适配。
 		router: {
 			mode: 'browser', // 使用history模式
 		},

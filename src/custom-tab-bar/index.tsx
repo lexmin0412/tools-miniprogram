@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Taro from '@tarojs/taro'
 import { View } from '@tarojs/components'
 import Route from '@/utils/route'
+import { getTabbar } from '@/utils/wx'
 import './index.scss'
 
 interface TabbarItem {
@@ -9,16 +10,12 @@ interface TabbarItem {
 	text: string
 }
 
-const list: TabbarItem[] = [
-	{
-		pagePath: 'index/index',
-		text: '首页',
-	},
-	{
-		pagePath: 'user/index',
-		text: '我的',
-	},
-]
+const list: TabbarItem[] = getTabbar().list.map(item => {
+	return {
+		...item,
+		pagePath: item.pagePath.split('.html')[0],
+	}
+})
 
 const CustomTabBar = (): JSX.Element => {
 	const [currentTab, setCurrentTab] = useState('')

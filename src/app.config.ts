@@ -1,5 +1,5 @@
 export default {
-	pages: ['index/index', 'user/index'],
+	pages: ['index/index', 'profile/index', 'search/index'],
 	subpackages: [
 		{
 			root: 'default',
@@ -15,11 +15,15 @@ export default {
 		list: [
 			{
 				pagePath: 'index/index',
-				text: '首页',
+				text: 'Home',
 			},
 			{
-				pagePath: 'user/index',
-				text: '我的',
+				pagePath: 'search/index',
+				text: 'Search',
+			},
+			{
+				pagePath: 'profile/index',
+				text: 'Profile',
 			},
 		],
 	},
