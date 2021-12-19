@@ -13,9 +13,6 @@ export const useList = (config: {
 	const [list, setList] = useState([])
 
 	const getData = async () => {
-		if (!hasMore) {
-			return
-		}
 		setLoading(true)
 		const { code, data } = await queryFunc({
 			page,

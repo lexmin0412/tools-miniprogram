@@ -12,6 +12,7 @@
 		"build:mp-local": "cross-env BUILD_ENV=local taro build --type weapp",
 		"build:mp-dev": "cross-env BUILD_ENV=dev taro build --type weapp",
 		"build:mp-test": "cross-env BUILD_ENV=test taro build --type weapp",
+		"build:mp-test:upload": "cross-env BUILD_ENV=test taro build --type weapp",
 		"build:mp-uat": "cross-env BUILD_ENV=uat taro build --type weapp",
 		"build:mp-pro": "cross-env BUILD_ENV=pro taro build --type weapp",
 		"dev:mp-local": "npm run build:mp-local -- --watch",
@@ -28,7 +29,8 @@
 		"dev:h5-dev": "npm run build:h5-dev -- --watch",
 		"dev:h5-test": "npm run build:h5-test -- --watch",
 		"dev:h5-uat": "npm run build:h5-uat -- --watch",
-		"dev:h5-pro": "npm run build:h5-pro -- --watch"
+		"dev:h5-pro": "npm run build:h5-pro -- --watch",
+		"upload": "node scripts/miniprogram-cli.js"
 	},
 	"husky": {
 		"hooks": {
@@ -86,6 +88,7 @@
 		"eslint-plugin-react-hooks": "^1.6.1",
 		"husky": "^4.3.0",
 		"lint-staged": "^10.4.0",
+		"miniprogram-ci": "^1.6.10",
 		"prettier": "^2.1.2",
 		"pretty-quick": "^3.0.2",
 		"stylelint": "9.3.0",

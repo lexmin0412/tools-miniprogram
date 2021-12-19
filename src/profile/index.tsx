@@ -11,10 +11,8 @@ import { useList } from '@/hooks/useList'
 import './index.scss'
 
 const ProfileIndex = (): JSX.Element => {
-	const [userName, setUserName] = useState('')
-	useEffect(() => {
-		setUserName('lexmin0412')
-	})
+	const userName = 'lexmin0412'
+
 	const [value, setValue] = useState(0)
 
 	const [repositories, loading, hasMore, scrollTop, loadMore] = useList({
@@ -34,6 +32,14 @@ const ProfileIndex = (): JSX.Element => {
 		queryFunc: (...rest) => usersService.getUserStarredList(...rest),
 		extraParams: { userName },
 	})
+
+	useEffect(() => {
+		if (value === 0) {
+			loadMore()
+		} else {
+			starredLoadMore()
+		}
+	}, [value])
 
 	return (
 		<View className='user-index-page'>
